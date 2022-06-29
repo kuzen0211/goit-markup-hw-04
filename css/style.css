@@ -89,6 +89,7 @@ h3 {
 header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
+
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
@@ -110,6 +111,36 @@ header {
   margin-left: 50px;
 }
 
+.icon-mail {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primeri-text-color);
+}
+
+.icon-tel {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primeri-text-color);
+}
+
+.auth-nav .link {
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav .icon-tel:hover,
+.auth-nav .icon-tel:focus {
+  fill: var(--accent-text-color);
+}
+
+.auth-nav .icon-mail:hover,
+.auth-nav .icon-mail:focus {
+  fill: var(--accent-text-color);
+}
 ul,
 a {
   list-style: none;
@@ -123,10 +154,12 @@ a {
 .address-nav .link:hover,
 .address-nav .link:focus {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 /* Hero */
 /* Тимчасовий фон */
+
 .hero {
   max-width: 1600px;
   max-height: 600px;
@@ -137,9 +170,8 @@ a {
   text-align: center;
 
   background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero.jpg');
-  border: 1px solid #000000;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -333,16 +365,21 @@ button {
   justify-content: space-between;
 }
 
-.link-page {
-  display: flex;
+.link-net {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  list-style: none;
+}
+
+.link-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
   fill: var(--icon-color);
   background-color: transparent;
+  border-radius: 50%;
+  list-style: none;
 }
 
 .link-icon {
@@ -353,7 +390,7 @@ button {
 }
 
 .link-page:hover,
-.link-page.hero-nav.visually-hidden {
+.link-page:focus {
   fill: var(--address-color);
   background-color: var(--accent-text-color);
 }
@@ -361,45 +398,62 @@ button {
 /* Section 4 */
 .list-customer {
   display: flex;
+  list-style: none;
+}
+
+.main-customer {
+  height: 92px;
+  width: 170px;
 }
 
 .page-customer {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
+  height: 100%;
   background-color: transparent;
-  border: 1px solid var(--icon-color);
-  height: 92px;
-  width: 170px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 
 .icon-customer {
-  display: flex;
   width: 106px;
   height: 60px;
   fill: var(--icon-color);
-}
-
-.main-customer {
-  display: flex;
 }
 
 .main-customer + .main-customer {
   margin-left: 30px;
 }
 
+.page-customer:hover,
+.page-customer:focus {
+  border: 1px solid var(--accent-text-color);
+}
+
+.icon-customer:hover,
+.icon-customer:focus {
+  fill: var(--accent-text-color);
+}
 /* Footer */
-/* Тимчасовий фон */
 .section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
+.container-footer {
+  display: flex;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
 .logo.down {
-  display: block;
+  display: flex;
   margin-bottom: 20px;
 
   color: var(--address-color);
@@ -458,6 +512,58 @@ footer {
   margin-bottom: 9px;
 }
 
+/* Footer link */
+.container-second {
+  margin-left: 70px;
+  padding-top: 12px;
+  padding-bottom: 40px;
+}
+
+.text-footer {
+  margin-bottom: 20px;
+
+  color: var(--address-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.list-footer {
+  display: flex;
+}
+
+.item-footer {
+  width: 44px;
+  height: 44px;
+}
+
+.item-footer + .item-footer {
+  margin-left: 10px;
+}
+
+.web-footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff10;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-footer {
+  height: 20px;
+  width: 20px;
+  fill: var(--address-color);
+}
+
+.web-footer:hover,
+.web-footer:focus {
+  background-color: var(--accent-text-color);
+}
+
 /* Portfolio */
 /* Navigation buttons */
 .section.portfolio {
@@ -490,6 +596,13 @@ footer {
 .navigation:focus {
   color: var(--address-color);
   background-color: var(--accent-text-color);
+}
+
+.work-link:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.work-link {
+  display: inline-block;
 }
 
 /* Work */
