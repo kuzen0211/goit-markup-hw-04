@@ -111,15 +111,7 @@ header {
   margin-left: 50px;
 }
 
-.icon-mail {
-  display: inline-flex;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  fill: var(--primeri-text-color);
-}
-
-.icon-tel {
+.icon-item {
   display: inline-flex;
   width: 16px;
   height: 16px;
@@ -132,15 +124,6 @@ header {
   align-items: center;
 }
 
-.auth-nav .icon-tel:hover,
-.auth-nav .icon-tel:focus {
-  fill: var(--accent-text-color);
-}
-
-.auth-nav .icon-mail:hover,
-.auth-nav .icon-mail:focus {
-  fill: var(--accent-text-color);
-}
 ul,
 a {
   list-style: none;
@@ -154,9 +137,12 @@ a {
 .address-nav .link:hover,
 .address-nav .link:focus {
   color: var(--accent-text-color);
-  fill: var(--accent-text-color);
 }
 
+.link:hover .icon-item,
+.link:focus .icon-item {
+  fill: var(--accent-text-color);
+}
 /* Hero */
 /* Тимчасовий фон */
 
@@ -432,11 +418,15 @@ button {
   border: 1px solid var(--accent-text-color);
 }
 
-.icon-customer:hover,
-.icon-customer:focus {
+.page-customer:hover .icon-customer {
   fill: var(--accent-text-color);
 }
+
 /* Footer */
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
